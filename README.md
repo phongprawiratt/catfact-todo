@@ -24,7 +24,9 @@ npm install
 Copy the provided .env.example and create a new .env file:
 
 MONGODB_URI=your-mongodb-uri
+
 JWT_SECRET=your-secret-key
+
 PORT=3000
 
 🔒 Note: The actual .env file is excluded from the repository for security reasons.
