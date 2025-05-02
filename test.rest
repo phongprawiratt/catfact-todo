@@ -1,0 +1,35 @@
+### Register
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "testpass"
+}
+
+### Login
+# @name login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "testpass"
+}
+
+### 🔐 Save token from login
+@token = {{login.response.body.token}}
+
+### Create ToDo
+POST http://localhost:3000/api/todos
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "message": "Feed the cat",
+  "date": "2025-05-02"
+}
+
+### Get My ToDos
+GET http://localhost:3000/api/todos
+Authorization: Bearer {{token}}
