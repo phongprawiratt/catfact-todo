@@ -19,7 +19,7 @@ git clone https://github.com/phongprawiratt/catfact-todo.git
 cd catfact-todo
 
 ### 2. Install dependencies
-npm install
+npm install npm install express@4.18.2
 
 ### 3. Create .env file
 Copy the provided .env.example and create a new .env file:
@@ -34,7 +34,7 @@ PORT=3000
 The required environment variable values will be provided via email for testing purposes !!
 
 ### 4. Run the server
-npx nodemon index.js
+npx nodemon index.js 
 
 ### 5. Testing
 You can test all API endpoints using the test.rest file provided in this repo.
