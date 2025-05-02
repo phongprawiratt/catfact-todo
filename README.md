@@ -15,6 +15,7 @@ A simple backend API built with **Node.js**, **Express**, and **MongoDB Atlas**,
 ### 1. Clone the repository
 
 git clone https://github.com/phongprawiratt/catfact-todo.git
+
 cd catfact-todo
 
 ### 2. Install dependencies
