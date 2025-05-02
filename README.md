@@ -66,6 +66,4 @@ I used ChatGPT to help study and better understand certain parts of the project 
 
 JWT-based authentication,Password hashing with bcrypt,Integration with MongoDB Atlas
 
-Thanks to AI tools, I was able to overcome technical blockers and learn more effectively throughout the development process
-
 
