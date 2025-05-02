@@ -1,5 +1,5 @@
 const axios = require('axios');
-const Todo = require('../models/Todo');
+const Todo = require('../models/todo');
 
 // POST /todos : to store todolist
 const createTodo = async (req, res) => {
