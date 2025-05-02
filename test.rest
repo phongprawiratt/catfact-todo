@@ -3,7 +3,7 @@ POST http://localhost:3000/api/auth/register
 Content-Type: application/json
 
 {
-  "username": "testuser",
+  "username": "testuser1",
   "password": "testpass"
 }
 
@@ -13,11 +13,11 @@ POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "username": "testuser",
+  "username": "testuser1",
   "password": "testpass"
 }
 
-### 🔐 Save token from login
+###  Save token from login
 @token = {{login.response.body.token}}
 
 ### Create ToDo
@@ -30,6 +30,6 @@ Authorization: Bearer {{token}}
   "date": "2025-05-02"
 }
 
-### Get My ToDos
+### Get ToDos
 GET http://localhost:3000/api/todos
 Authorization: Bearer {{token}}

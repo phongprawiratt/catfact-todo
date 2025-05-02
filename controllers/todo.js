@@ -1,36 +1,42 @@
 const axios = require('axios');
-const todos = require('../models/todo');
+const Todo = require('../models/Todo');
 
-// POST /todos - สร้าง ToDo ใหม่
+// POST /todos : to store todolist
 const createTodo = async (req, res) => {
   try {
     const { message, date } = req.body;
-    const userId = req.user.id;
+    const userId = req.user.id; 
 
-    // Fetch Cat Fact
+    // using Axios for cat fact fetch API and store in Todo too !!
     const response = await axios.get('https://catfact.ninja/fact');
     const catFact = response.data.fact;
 
-    const newTodo = {
-      id: todos.length + 1,
+    const newTodo = new Todo({
       userId,
       message,
       date,
       catFact
-    };
+    });
 
-    todos.push(newTodo);
+    await newTodo.save();
+
     res.status(201).json(newTodo);
   } catch (error) {
     res.status(500).json({ message: 'Error creating ToDo', error: error.message });
   }
 };
 
-// GET /todos - ดึงข้อมูล ToDo ของผู้ใช้
-const getTodos = (req, res) => {
-  const userId = req.user.id;
-  const userTodos = todos.filter(todo => todo.userId === userId);
-  res.json(userTodos);
+// GET /todos - : Get todo for the authenticated user
+const getTodos = async (req, res) => {
+  try {
+    const userId = req.user.id;
+
+    const userTodos = await Todo.find({ userId });
+
+    res.json(userTodos);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching ToDos', error: error.message });
+  }
 };
 
 module.exports = { createTodo, getTodos };
