@@ -37,19 +37,25 @@ npx nodemon index.js
 You can test all API endpoints using the test.rest file provided in this repo.
 Make sure to install the REST Client extension for VS Code, then open and run requests directly from the test.rest file.
 
-🔌 API Endpoints
-🔐 Authentication
-Method	Endpoint	Description
-POST	/api/auth/register	Register a new user
-POST	/api/auth/login	Log in and get token
+## 🔌 API Endpoints
 
-📝 ToDos (requires JWT)
-Method	Endpoint	Description
-POST	/api/todos	Create new ToDo
-GET	/api/todos	List user's ToDos
+### 🔐 Authentication
 
-Include the JWT token in the Authorization header as:
-Bearer YOUR_TOKEN_HERE
+| Method | Endpoint              | Description        |
+|--------|-----------------------|--------------------|
+| POST   | `/api/auth/register`   | Register a new user |
+| POST   | `/api/auth/login`      | Log in and get token|
+
+### 📝 ToDos (requires JWT)
+
+| Method | Endpoint     | Description       |
+|--------|--------------|-------------------|
+| POST   | `/api/todos` | Create new ToDo   |
+| GET    | `/api/todos` | List user's ToDos |
+
+> Include the JWT token in the `Authorization` header as:  
+> `Bearer YOUR_TOKEN_HERE`
+
 
 ! 🤖 Assistance Acknowledgment !
 This project was built as part of a Junior Backend Developer test.
