@@ -19,16 +19,16 @@ git clone https://github.com/phongprawiratt/catfact-todo.git
 cd catfact-todo
 
 ### 2. Install dependencies
-npm install npm install express@4.18.2
+npm install express@4.18.2
 
 ### 3. Create .env file
 Copy the provided .env.example and create a new .env file:
 
-MONGODB_URI=your-mongodb-uri
+PORT=3000
 
 JWT_SECRET=your-secret-key
 
-PORT=3000
+MONGODB_URI=your-mongodb-uri
 
 🔒 Note: The actual .env file is excluded from the repository for security reasons.
 The required environment variable values will be provided via email for testing purposes !!
